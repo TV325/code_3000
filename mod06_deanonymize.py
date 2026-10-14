@@ -28,4 +28,4 @@ def deanonymization_rate(matches_df, anon_df):
     Compute the fraction of anonymized records
     that were uniquely re-identified.
     """
-    return len(matches_df) / len(anon_df)
+    return (len(matches_df) - len(anon_df)) / len(anon_df)
